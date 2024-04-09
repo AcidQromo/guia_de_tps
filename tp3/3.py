@@ -1,3 +1,4 @@
+#Ejercicio 3:Tres personas invierten dinero para fundar una empresa (no necesariamente en partes iguales). Calcular qué porcentaje invirtió cada una.
 num1 = int(input("Inversión 1: "))
 num2 = int(input("Inversión 2: "))
 num3 = int(input("Inversión 3: "))

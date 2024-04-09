@@ -1,3 +1,4 @@
+#Ejercicio 5: Una inmobiliaria paga a sus vendedores un salario base, más una comisión fija por cada venta realizada, más el 5% del valor de esas ventas. Realizar un programa que imprima el número del vendedor y el salario que le corresponde en un determinado mes. Se leen por teclado el número del vendedor, la cantidad de ventas que realizó y el valor total de las mismas.
 sellers_quantity = int(input("Ingrese la cantidad de vendedores en su empresa: "))
 array_sellers = [] 
 array_sells = []

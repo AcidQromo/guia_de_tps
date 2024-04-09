@@ -1,3 +1,13 @@
+#Ejercicio 1: Las variables guardan datos de diferente tipo y permiten cambiar su valor. Dadas dos variables numéricas A y B, que el usuario debe ingresar por teclado, se pide:
+#Diseñar el algoritmo para resolver los siguientes problemas y escriba el pseudocodigo o diagrama de flujo.
+#a.Mostrar el mensaje “Hola Mundo”.
+#b.Ingresar el nombre del usuario del programa y saludarlo. Ejemplo: Si el usuario se llama Juan, se debe mostrar el mensaje “Hola Juan”.
+#c.Ingresar dos números y mostrar la suma y la diferencia.
+#d.Ingresar tres números y mostrar el promedio.
+#e.Ingresar el monto de una factura y calcular el IVA (21%).
+#f.Duplicar el valor que poseen y mostrarlo por pantalla.
+#g.Intercambiar los valores de ambas variables y mostrar cuánto valen al final las dos variables.
+
 #a
 print("Hola mundo")
 

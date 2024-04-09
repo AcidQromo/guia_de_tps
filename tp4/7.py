@@ -1,3 +1,5 @@
+#Ejercicio 7:Leer tres números correspondientes al día, mes y año de una fecha e imprimir un mensaje
+#indicando si la fecha es válida o no.
 dia = int(input("Ingrese el dia a analizar: "))
 mes = int(input("Ingrese el mes a analizar: "))
 anio = int(input("Ingrese el año a analizar: "))

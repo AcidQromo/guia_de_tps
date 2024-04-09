@@ -1,3 +1,4 @@
+#Ejercicio 8:Un banco necesita para sus cajeros de la sucursal un programa que lea una cantidad de dinero que desea retirar el cliente e imprima a cuántos billetes equivale, considerando que existen billetes de $1000, $500, $200, $100, $50, $20 y el resto en monedas. Desarrollar dicho programa de tal forma que se minimice la cantidad de billetes entregados por el cajero
 money = int(input("Ingrese la cantidad de dinero a retirar sin centavos: "))
 currency_array = [1000, 500, 200, 100, 50, 20]
 
