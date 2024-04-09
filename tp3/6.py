@@ -1,8 +1,13 @@
-anio = int(input("Ingrese el año a analizar: "))
+invest = int(input("Ingrese el dinero a invertir para calcular lo que ganarìa en 6 meses: "))
+array_months_earn = [invest]
+total_earnings = (invest * 0.02) * 6
+print(f"En 6 meses de intereses no compuestos tendrias un total de: {total_earnings + invest}$.")
 
-if ((anio / 4) - int(anio / 4)) == 0 and ((anio / 100) - int(anio / 100)) == 0 and ((anio / 400) - int(anio / 400)) == 0:
-    print("Es un año biciesto.")
-elif ((anio / 4) - int(anio / 4)) == 0 and ((anio / 100) - int(anio / 100)) != 0:
-    print("Es un año biciesto.")
-else:
-    print("No es un año biciesto.")
+for i in range(0, 6):
+    temp_value = (array_months_earn[i] * 0.02) + array_months_earn[i]
+    array_months_earn.append(temp_value)
+
+print("Si tuvieramos intereses compuestos -> ")
+
+for i in range(0, 6):
+    print(f"Total de dinero en el mes {i + 1}: {array_months_earn[i]}$")

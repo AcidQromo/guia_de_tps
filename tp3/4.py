@@ -1,9 +1,10 @@
-primer_parcial = float(input("Ingresa la nota de tu primer parcial: "))
-segundo_parcial = float(input("Ingresa la nota de tu segundo parcial: "))
+medida = int(input("Ingrese medida en metros a convertir: "))
+centimetros = medida * 100
+pulgadas = centimetros / 2.54
+pies = pulgadas / 12
+yardas = pies / 3
 
-if primer_parcial >= 7 and segundo_parcial >= 7:
-    print("Promociona.")
-elif primer_parcial >= 4 and segundo_parcial >= 4:
-    print("Aprueba, no promociona.")
-else:
-    print("Desaprueba. Debe recuperar.")
+print("La medida en centimetros es: ", centimetros)
+print("La medida en pulgadas es: ", pulgadas)
+print("La medida en pies es: ", pies)
+print("La medida en yardas es: ", yardas)

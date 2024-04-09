@@ -1,8 +1,0 @@
-num1 = input("Escribe tu primera variable: ")
-num2 = input("Escribe tu segunda variable: ")
-
-temp = num1
-num1 = num2
-num2 = temp
-
-print(f"Primera variable: {num1}. Segunda variable: {num2}")
