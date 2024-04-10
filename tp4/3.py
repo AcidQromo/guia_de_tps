@@ -1,7 +1,6 @@
-#Ejercicio 3:Ingresar la edad de una persona e indicar si es mayor de edad (mayor o igual a 18 años).
-edad = int(input("Ingresa la edad a analizar: "))
+#Ejercicio 3:Mostrar las tablas de multiplicar (entre 1 y 10) del número 4. ¿Cómo cambiaría el algoritmo
+#para que el usuario pueda decidir la tabla de multiplicar a mostrar?
+number = int(input("Ingresa un valor entero: "))
 
-if edad >= 18:
-    print("Eres mayor o igual a 18 años.")
-else:
-    print("Eres menor a 18 años.")
+for i in range(1, 11):
+    print(f"{i} x {number}: {i * number}")

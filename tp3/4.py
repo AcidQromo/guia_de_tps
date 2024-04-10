@@ -1,16 +1,13 @@
-#Ejercicio 4:
-#Leer una medida en metros e imprimir esta medida expresada en centímetros, pulgadas, pies y yardas. Los factores de conversión son:
-#1 pie = 12 pulgadas
-#1 yarda = 3 pies
-#1 pulgada = 2,54 cm.
-#1 metro = 100 cm.
-medida = int(input("Ingrese medida en metros a convertir: "))
-centimetros = medida * 100
-pulgadas = centimetros / 2.54
-pies = pulgadas / 12
-yardas = pies / 3
+#Ejercicio 4:Ingresar las notas de los dos parciales de un alumno e indicar si promocionó, aprobó o debe recuperar.
+#• Se promociona cuando las notas de ambos parciales son mayores o iguales a 7.
+#• Se aprueba cuando las notas de ambos parciales son mayores o iguales a 4.
+#• Se debe recuperar cuando al menos una de las dos notas es menor a 4.
+primer_parcial = float(input("Ingresa la nota de tu primer parcial: "))
+segundo_parcial = float(input("Ingresa la nota de tu segundo parcial: "))
 
-print("La medida en centimetros es: ", centimetros)
-print("La medida en pulgadas es: ", pulgadas)
-print("La medida en pies es: ", pies)
-print("La medida en yardas es: ", yardas)
+if primer_parcial >= 7 and segundo_parcial >= 7:
+    print("Promociona.")
+elif primer_parcial >= 4 and segundo_parcial >= 4:
+    print("Aprueba, no promociona.")
+else:
+    print("Desaprueba. Debe recuperar.")

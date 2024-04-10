@@ -1,9 +1,5 @@
-#Ejercicio 2:Leer un número entero e imprimir un mensaje indicando si es par, impar o es cero.
-num = int(input("Ingresa el valor a determinar: "))
-
-if num == 0:
-    print("El valor es 0.")
-elif (num / 2) - int(num / 2) != 0:
-    print("El valor es impar.")
-else:
-    print("El valor es par.")
+#Ejercicio 2:Calcular e imprimir la suma de los números comprendidos entre 42 y 176.
+num1 = 42
+num2 = 176
+for i in range(num1, num2 + 1):
+    print(f"Numero del rango: {i}")

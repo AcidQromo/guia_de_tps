@@ -1,13 +1,9 @@
-#Ejercicio 4:Ingresar las notas de los dos parciales de un alumno e indicar si promocionó, aprobó o debe recuperar.
-#• Se promociona cuando las notas de ambos parciales son mayores o iguales a 7.
-#• Se aprueba cuando las notas de ambos parciales son mayores o iguales a 4.
-#• Se debe recuperar cuando al menos una de las dos notas es menor a 4.
-primer_parcial = float(input("Ingresa la nota de tu primer parcial: "))
-segundo_parcial = float(input("Ingresa la nota de tu segundo parcial: "))
+#Ejercicio 4:Se desea ingresar la nota de 5 alumnos y mostrar su promedio.
+total = 0
 
-if primer_parcial >= 7 and segundo_parcial >= 7:
-    print("Promociona.")
-elif primer_parcial >= 4 and segundo_parcial >= 4:
-    print("Aprueba, no promociona.")
-else:
-    print("Desaprueba. Debe recuperar.")
+for i in range(1, 6):
+    note = float(input(f"Ingrese la nota del alumno número {i}: "))
+    total += note
+
+promedio = (total / 5)
+print(f"El promedio es de: {promedio}")

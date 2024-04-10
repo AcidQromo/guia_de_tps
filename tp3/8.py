@@ -1,16 +1,25 @@
-#Ejercicio 8:Un banco necesita para sus cajeros de la sucursal un programa que lea una cantidad de dinero que desea retirar el cliente e imprima a cuántos billetes equivale, considerando que existen billetes de $1000, $500, $200, $100, $50, $20 y el resto en monedas. Desarrollar dicho programa de tal forma que se minimice la cantidad de billetes entregados por el cajero
-money = int(input("Ingrese la cantidad de dinero a retirar sin centavos: "))
-currency_array = [1000, 500, 200, 100, 50, 20]
+#Ejercicio 8:Diseñar un programa que calcule y muestre el sueldo neto de un empleado en base a su sueldo
+#básico y su antigüedad en años. Si es soltero se le incrementa el sueldo en 5% del salario bruto
+#por cada año de antigüedad, mientras que si es casado se le incrementa el sueldo en 7% del
+#bruto por cada año de antigüedad. También se le realizan los siguientes descuentos: Jubilación:
+#11%, Obra Social: 3%, Sindicato: 3%.
+#Como datos de entrada se ingresa por teclado el sueldo básico, antigüedad y estado civil (‘s’ o
+#‘c’). Se debe informar: (reemplazar los 9 por los valores que correspondan)
+sueldo = int(input("Sueldo bruto percibido: "))
+antiguedad = int(input("Antiguedad en años: "))
+estado_civil = input("Estado civil (S o C): ")
 
-if money < 20:
-    print(f"El cajero nos daria {money} monedas de 1 peso.")
+if estado_civil == 'S':
+    incremento_antiguedad = antiguedad * (sueldo * 0.05)
 else:
-    thousands = int(money / currency_array[0])
-    five_hundreds = int((money - (thousands * currency_array[0])) / currency_array[1])
-    two_hundreds = int((money - (thousands * currency_array[0]) - (five_hundreds * currency_array[1])) / currency_array[2])
-    hundreds = int((money - (thousands * currency_array[0]) - (five_hundreds * currency_array[1]) - (two_hundreds * currency_array[2])) / currency_array[3])
-    fifths = int((money - (thousands * currency_array[0]) - (five_hundreds * currency_array[1]) - (two_hundreds * currency_array[2]) - (hundreds * currency_array[3])) / currency_array[4])
-    twenties = int((money - (thousands * currency_array[0]) - (five_hundreds * currency_array[1]) - (two_hundreds * currency_array[2]) - (hundreds * currency_array[3]) - (fifths * currency_array [4])) / currency_array[5])
-    rest = int((money - (thousands * currency_array[0]) - (five_hundreds * currency_array[1]) - (two_hundreds * currency_array[2]) - (hundreds * currency_array[3]) - (fifths * currency_array [4]) - (twenties * currency_array[5])))
+    incremento_antiguedad = antiguedad * (sueldo * 0.07)
 
-print(f"El cajero nos daria {thousands} billetes de 1000$, {five_hundreds} de 500$, {two_hundreds} de 200$, {hundreds} de 100$, {fifths} de 50$, {twenties} de 20$ y {rest} en monedas de 1 peso.")
+sueldo += incremento_antiguedad
+sueldo -= (sueldo * 0.11)
+sueldo -= (sueldo * 0.03)
+sueldo -= (sueldo * 0.03)
+
+print(f"El sueldo neto resultante seria de: {round(sueldo)}$")
+
+
+
