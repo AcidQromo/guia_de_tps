@@ -5,10 +5,18 @@
 #(Ley de formación de los términos en dicha serie: los dos primeros términos son 1 y cada uno
 #de los demás es igual a la suma de los dos anteriores).
 
-fibo_array = []
+fibo_array = [0, 1, 1]
 value = int(input("Ingrese un valor: "))
 
-while True:
-    if value == 1:
+i = 0
+
+for i in range (0, 15):
+    fibo_array.append(fibo_array[i + 1] + fibo_array[i + 2])
+    if fibo_array[i] == value:
         print("El número pertenece a la secuencia de Fibonacci.")
-    elif value <
+        break
+    elif fibo_array[i] > value:
+        print("El número no pertenece a la secuencia de Fibonacci. ")
+        break
+    i += 1
+    
