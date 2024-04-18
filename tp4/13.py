@@ -4,12 +4,9 @@
 #Si el número es 5, este pertenece a la serie y su orden es 5.
 #(Ley de formación de los términos en dicha serie: los dos primeros términos son 1 y cada uno
 #de los demás es igual a la suma de los dos anteriores).
-
 fibo_array = [0, 1, 1]
 value = int(input("Ingrese un valor: "))
-
 i = 0
-
 for i in range (0, 15):
     fibo_array.append(fibo_array[i + 1] + fibo_array[i + 2])
     if fibo_array[i] == value:
