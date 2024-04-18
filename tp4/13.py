@@ -7,7 +7,7 @@
 fibo_array = [0, 1, 1]
 value = int(input("Ingrese un valor: "))
 i = 0
-for i in range (0, 15):
+while True:
     fibo_array.append(fibo_array[i + 1] + fibo_array[i + 2])
     if fibo_array[i] == value:
         print("El número pertenece a la secuencia de Fibonacci.")
