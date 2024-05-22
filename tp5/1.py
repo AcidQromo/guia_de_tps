@@ -8,4 +8,4 @@ def fact(value):
         cont = cont * i
     return cont
 
-print("El factorial del valor es: ", fact(number))
+print("El factorial del valor es:", fact(number))
