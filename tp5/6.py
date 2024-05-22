@@ -9,15 +9,16 @@ while anio < 1600 or 10000 < anio:
     anio = int(input("Ingrese un anio valido: "))
 
 def anio_biciesto(year):
+    leap_year = False
     if year % 4 == 0:
         if year % 100 == 0:
             if year % 400 == 0:
-                return "Biciesto"
-            else:
-                return "No biciesto"
+                leap_year = True
         else:
-            return "Biciesto"
-    else:
-        return "No biciesto"
+            leap_year = True
+    return leap_year
 
-print("El anio ingresado es", anio_biciesto(anio))
+if anio_biciesto(anio):
+    print("Fecha valida.")
+else:
+    print("Fecha invalida.")
