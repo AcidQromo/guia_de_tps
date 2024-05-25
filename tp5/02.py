@@ -5,6 +5,12 @@ titulo = input("Ingrese el titulo: ")
 aste = int(input("Ingrese la longitud de asteriscos: "))
 
 def title(title, lenght):
-    print(f"{'*' * lenght}\n{title}\n{'*' * lenght}")
+    for i in range(lenght):
+        print("*", end="")
+    print()
+    print(title)
+    for i in range(lenght):
+        print("*", end="")
+    print()
 
 title(titulo, aste)
