@@ -5,8 +5,8 @@ numero = int(input("Ingrese el numero a evaluar: "))
 
 def divisor(number):
     if 0 < number:
-        return print("El numero", number, "es positivo.")
+        return "El numero", number, "es positivo."
     else:
-        return print("El numero", number, "no es positivo.")
+        return "El numero", number, "no es positivo."
 
-divisor(numero)
+print(divisor(numero))

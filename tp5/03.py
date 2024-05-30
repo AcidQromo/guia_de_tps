@@ -6,6 +6,6 @@
 mes = int(input("Ingrese el numero de mes entre 1 y 12: "))
 
 def obtener_mes_en_texto(month):
-    print(["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"][month - 1])
+    ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"][month - 1]
 
-obtener_mes_en_texto(mes)
+print(obtener_mes_en_texto(mes))
