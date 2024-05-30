@@ -3,21 +3,6 @@
 #según la fecha sea correcta o no. Realizar también un programa para verificar el
 #comportamiento de la función.
 
-num1 = int(input("Ingrese el primer valor entero positivo: "))
-
-while num1 < 0:
-    num1 = int(input("Ingrese un valor positivo valido: "))
-
-num2 = int(input("Ingrese el segundo valor entero positivo: "))
-
-while num2 < 0:
-    num2 = int(input("Ingrese un valor positivo valido: "))
-
-num3 = int(input("Ingrese el tercer valor entero positivo: "))
-
-while num3 < 0:
-    num3 = int(input("Ingrese un valor positivo valido: "))
-
 def validar_fecha(day, month, year):
     valid_date = False
 
@@ -47,6 +32,22 @@ def validar_fecha(day, month, year):
                     valid_date = True
     
     return valid_date
+
+
+num1 = int(input("Ingrese el primer valor entero positivo: "))
+
+while num1 < 0:
+    num1 = int(input("Ingrese un valor positivo valido: "))
+
+num2 = int(input("Ingrese el segundo valor entero positivo: "))
+
+while num2 < 0:
+    num2 = int(input("Ingrese un valor positivo valido: "))
+
+num3 = int(input("Ingrese el tercer valor entero positivo: "))
+
+while num3 < 0:
+    num3 = int(input("Ingrese un valor positivo valido: "))
 
 if validar_fecha(num1, num2, num3):
     print("Fecha valida.")

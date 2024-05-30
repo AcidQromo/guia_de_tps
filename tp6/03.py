@@ -3,4 +3,19 @@
 #estar repetido, en cuyo caso deberán mostrarse todas las posiciones que ocupe. No utilizar la
 #función min, index o find de Python, debe resolver el algoritmo, puede crear sus propias
 #funciones o resolverlo sin funciones.
+import random
 
+def list_filler():
+    list1 = []
+    number = int(input("Ingrese un valor para ingresar en la lista o -1 para terminar: "))
+    while number != -1:
+        if number > 0:
+            list1.append(number)
+            number = int(input("Ingrese un valor positivo o -1 para terminar: "))
+        else:
+            number = int(input("Ingrese un valor positivo valido o -1 para terminar: "))
+    return list1
+
+
+
+list_filler(desde, hasta, longitud)

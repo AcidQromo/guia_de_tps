@@ -3,9 +3,9 @@
 #parámetro no es válido, devolver una cadena vacía. Ejemplo: Se invoca
 #obtener_mes_en_texto(4) → devuelve “Abril”.
 
-mes = int(input("Ingrese el numero de mes entre 1 y 12: "))
-
 def obtener_mes_en_texto(month):
     ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"][month - 1]
+
+mes = int(input("Ingrese el numero de mes entre 1 y 12: "))
 
 print(obtener_mes_en_texto(mes))
