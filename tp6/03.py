@@ -5,17 +5,45 @@
 #funciones o resolverlo sin funciones.
 import random
 
-def list_filler():
+def list_filler(start, finish, lenght):
     list1 = []
-    number = int(input("Ingrese un valor para ingresar en la lista o -1 para terminar: "))
-    while number != -1:
-        if number > 0:
-            list1.append(number)
-            number = int(input("Ingrese un valor positivo o -1 para terminar: "))
-        else:
-            number = int(input("Ingrese un valor positivo valido o -1 para terminar: "))
+    for _ in range(lenght):
+        list1.append(random.randint(start, finish))
+    
     return list1
 
+def detector(list):
+    min_value = list[0]
+    indices = [0]  # Initialize with the first index as the minimum value is initially lst[0]
 
+    for i in range(1, len(list)):
+        if list[i] < min_value:
+            min_value = list[i]
+            indices = [i]  # Reset the indices list if a new minimum is found
+        elif list[i] == min_value:
+            indices.append(i)  # Append the index if the current element equals the minimum
 
-list_filler(desde, hasta, longitud)
+    return min_value, indices
+
+desde = int(input("Ingrese el valor desde el cual se produciran valores: "))
+
+while desde < 0:
+    desde = int(input("Ingrese un valor positivo valido: "))
+
+hasta = int(input("Ingrese el valor hasta el cual se produciran valores (debe ser mayor al ingresado anteriormente): "))
+
+while hasta < desde:
+    hasta = int(input("Ingrese un valor positivo valido mayor al ingresado anteriormente: "))
+
+longitud = int(input("Ingrese la longitud de la cadena: "))
+
+while longitud < 0:
+    longitud = int(input("Ingrese un valor positivo valido: "))
+
+lista = list_filler(desde, hasta, longitud)
+
+print(lista)
+
+minimo, lista_indices = detector(lista)
+print(minimo)
+print(lista_indices)
