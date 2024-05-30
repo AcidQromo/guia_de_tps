@@ -5,9 +5,6 @@
 #al terminar el juego. Utilizar la función creada en el ejercicio 8 para resolver el problema.
 import random
 
-random_number = random.randint(1000, 9999)
-numero = int(input("Numero al azar generado! Adivinelo: "))
-
 def adivinador(number):
     counter = 1
     while number != random_number:
@@ -23,6 +20,10 @@ def adivinador(number):
             number = int(input("Ingrese un valor valido entre 1000 y 9999: "))
 
     print("Ganaste! El valor era", number, "e intentaste", counter, "veces.")
+
+
+random_number = random.randint(1000, 9999)
+numero = int(input("Numero al azar generado! Adivinelo: "))
 
 adivinador(numero)
 
