@@ -1,6 +1,7 @@
 # Fundamentos de la Informática
 
 Repo de Trabajos Practicos donde se ve la introducción a la algoritmia.
+TP5 & TP6 son parte fundamental de la materia.
 
 ## Installation
 
