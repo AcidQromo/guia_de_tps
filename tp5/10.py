@@ -7,9 +7,7 @@ import random
 
 def adivinador(number):
     counter = 1
-    while number != random_number:
-        if number == -1:
-               return print("Termina el programa.")
+    while number != random_number and number != -1:
         if 1000 <= number and number <= 9999:
             if number < random_number:
                 number = int(input("Mala suerte! Ingrese un valor mayor: "))
@@ -18,11 +16,13 @@ def adivinador(number):
             counter = counter + 1
         else:
             number = int(input("Ingrese un valor valido entre 1000 y 9999: "))
+    if number != -1:
+        print("El valor era", number, "e intentaste", counter, "veces.")
+    else:
+        print("Termina el programa.")
 
-    print("Ganaste! El valor era", number, "e intentaste", counter, "veces.")
 
-
-random_number = random.randint(1000, 9999)
+random_number = random.randint(1000, 1005)
 numero = int(input("Numero al azar generado! Adivinelo: "))
 
 adivinador(numero)
