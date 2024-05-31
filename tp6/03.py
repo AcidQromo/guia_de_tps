@@ -14,16 +14,16 @@ def list_filler(start, finish, lenght):
 
 def detector(list):
     min_value = list[0]
-    indices = [0]  # Initialize with the first index as the minimum value is initially lst[0]
+    indexes = [0]  
 
     for i in range(1, len(list)):
         if list[i] < min_value:
             min_value = list[i]
-            indices = [i]  # Reset the indices list if a new minimum is found
+            indexes = [i]  
         elif list[i] == min_value:
-            indices.append(i)  # Append the index if the current element equals the minimum
+            indexes.append(i)  
 
-    return min_value, indices
+    return min_value, indexes
 
 desde = int(input("Ingrese el valor desde el cual se produciran valores: "))
 
@@ -44,6 +44,5 @@ lista = list_filler(desde, hasta, longitud)
 
 print(lista)
 
-minimo, lista_indices = detector(lista)
-print(minimo)
-print(lista_indices)
+minimo, indices = detector(lista)
+print("Se detecto", minimo, "como el minimo numero en el/los indice/s de la lista" ,indices)
