@@ -19,25 +19,25 @@ def list_filler():
     
     return list1
 
-def first_value_2_end(list):
-    first_value = list[0]
+def first_value_2_end(lst):
+    first_value = lst[0]
 
-    for i in range(1, len(list)):
-        list[i - 1] = list[i]
+    for i in range(1, len(lst)):
+        lst[i - 1] = lst[i]
     
-    list[len(list) - 1] = first_value
+    lst[len(lst) - 1] = first_value
 
-    return list
+    return lst
 
-def last_value_2_start(list):
-    last_value = list[len(list) - 1]
+def last_value_2_start(lst):
+    last_value = lst[len(lst) - 1]
 
-    for i in range(len(list) - 1, 0, -1):
-        list[i] = list[i - 1]
+    for i in range(len(lst) - 1, 0, -1):
+        lst[i] = lst[i - 1]
     
-    list[0] = last_value
+    lst[0] = last_value
 
-    return list
+    return lst
 
 lista = list_filler()
 print("Lista sin modificaciones")
