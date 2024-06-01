@@ -10,9 +10,10 @@ def generator(limit):
         random_number = random.randint(1, 20)
         list1.append(random_number)
     
-    for i in list1:
-        sum = i + sum
-        prom = sum / len(list1)
+    for i in range(len(list1)):
+        sum = list1[i] + sum
+    
+    prom = sum / len(list1)
 
     for i in range(len(list1)):
         if list1[i] > prom:

@@ -12,16 +12,16 @@ def list_filler(start, finish, lenght):
     
     return list1
 
-def detector(list):
-    min_value = list[0]
+def detector(lst):
+    min_value = lst[0]
     indexes = [0]  
 
-    for i in range(1, len(list)):
-        if list[i] < min_value:
-            min_value = list[i]
+    for i in range(1, len(lst)):
+        if lst[i] < min_value:
+            min_value = lst[i]
             indexes = [i]  
-        elif list[i] == min_value:
-            indexes.append(i)  
+        elif lst[i] == min_value:
+            indexes.append(i)
 
     return min_value, indexes
 
