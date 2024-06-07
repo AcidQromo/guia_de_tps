@@ -70,13 +70,14 @@ def detector(result):
 longitud = int(input("Ingrese el valor de numeros enteros que desea en la lista: "))
 
 secuencias = list_filler(longitud)
+print("--Secuencia generada--")
+print(secuencias)
 
 secuencias_divididas = separator(secuencias)
 print("--Secuencias con 0's--")
 print(secuencias_divididas)
 
 secuencia_dividida = splitter(secuencias_divididas)
-
 print("--Secuencia/s mas larga/s--")
 print(detector(secuencia_dividida))
 
