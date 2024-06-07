@@ -13,7 +13,6 @@
 #A partir de la lista SECUENCIAS generada en el ejercicio anterior, mostrar la secuencia más larga
 #almacenada en la misma. Si hubiera varias secuencias con la misma longitud máxima deberán
 #mostrarse todas las que correspondan.
-import random
 import modlists as modlists
 
 def separator(lst):
