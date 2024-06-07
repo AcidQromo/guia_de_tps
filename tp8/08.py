@@ -38,7 +38,10 @@ def separator(lst):
 def detector(lst):
     result = []
     current_subarray = []
-    
+    max_lenght = 0
+    counter = 0
+    position = []
+
     for i in range(0, len(lst)):
         if lst[i] == 0:
             result.append(current_subarray)
@@ -49,9 +52,7 @@ def detector(lst):
     if len(current_subarray) != 0:
         result.append(current_subarray)
     
-    max_lenght = 0
-    counter = 0
-    position = []
+
     for i in range(0, len(result)):
 
         if max_lenght <= len(result[i]):
