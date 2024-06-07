@@ -14,14 +14,7 @@
 #almacenada en la misma. Si hubiera varias secuencias con la misma longitud máxima deberán
 #mostrarse todas las que correspondan.
 import random
-
-def list_filler(lenght):
-    lst = []
-    for _ in range(lenght):
-        random_number = random.randint(1, 20)
-        lst.append(random_number)
-    
-    return lst
+import modlists as modlists
 
 def separator(lst):
     sequences = []
@@ -69,7 +62,8 @@ def detector(lst):
 
 longitud = int(input("Ingrese el valor de numeros enteros que desea en la lista: "))
 
-secuencias = list_filler(longitud)
+#secuencias = list_filler(longitud)
+secuencias = modlists.generate_random_list(longitud)
 print("--Secuencia generada--")
 print(secuencias)
 
