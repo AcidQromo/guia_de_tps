@@ -16,12 +16,12 @@
 import random
 
 def list_filler(lenght):
-    list1 = []
+    lst = []
     for _ in range(lenght):
         random_number = random.randint(1, 20)
-        list1.append(random_number)
+        lst.append(random_number)
     
-    return list1
+    return lst
 
 def separator(lst):
     sequences = []
@@ -51,19 +51,19 @@ def splitter(lst):
 
     return result
 
-def detector(result):
+def detector(lst):
     max_lenght = 0
     counter = 0
     position = []
 
-    for i in range(0, len(result)):
-        if max_lenght <= len(result[i]):
-            max_lenght = len(result[i])
+    for i in range(0, len(lst)):
+        if max_lenght <= len(lst[i]):
+            max_lenght = len(lst[i])
             counter = counter + 1
     
-    for i in range(0, len(result)):
-        if len(result[i]) == max_lenght:
-            position.append(result[i])
+    for i in range(0, len(lst)):
+        if len(lst[i]) == max_lenght:
+            position.append(lst[i])
 
     return position
 
