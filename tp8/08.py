@@ -35,12 +35,9 @@ def separator(lst):
 
     return sequences
 
-def detector(lst):
+def splitter(lst):
     result = []
     current_subarray = []
-    max_lenght = 0
-    counter = 0
-    position = []
 
     for i in range(0, len(lst)):
         if lst[i] == 0:
@@ -51,10 +48,15 @@ def detector(lst):
 
     if len(current_subarray) != 0:
         result.append(current_subarray)
-    
+
+    return result
+
+def detector(result):
+    max_lenght = 0
+    counter = 0
+    position = []
 
     for i in range(0, len(result)):
-
         if max_lenght <= len(result[i]):
             max_lenght = len(result[i])
             counter = counter + 1
@@ -73,9 +75,11 @@ secuencias_divididas = separator(secuencias)
 print("--Secuencias con 0's--")
 print(secuencias_divididas)
 
-result = detector(secuencias_divididas)
-print("--Secuencia/s mas larga/s generada en la primer cadena--")
-print(result)
+secuencia_dividida = splitter(secuencias_divididas)
+
+print("--Secuencia/s mas larga/s--")
+print(detector(secuencia_dividida))
+
 
 
 
