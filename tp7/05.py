@@ -5,11 +5,11 @@
 
 import modlists
 
-#Burbujeo desc
-def ord_bubble_desc(lst):
+#Burbujeo asc
+def ord_bubble_asc(lst):
     for _ in range(0, len(lst)):
         for i in range(1, len(lst)):
-            if lst[i] > lst[i - 1]:
+            if lst[i] < lst[i - 1]:
                 aux = lst[i]
                 lst[i] = lst[i - 1]
                 lst[i - 1] = aux
@@ -19,10 +19,15 @@ def ord_bubble_desc(lst):
 def binary_search(num, lst):
     start = 0
     end = len(lst)
-    if lst[int((start+end)/2)] == num:
-        
-    elif lst[int((start+end)/2)] < num:
-        end = lst[int((start+end)/2)]
+    while start < end:
+        mid = int((start + end) / 2)
+        if lst[mid] == num:
+            return True
+        elif lst[mid] > num:
+            end = mid
+        else:
+            start = mid + 1
+    return False    
 
 lista = []
 cont = 0
@@ -36,7 +41,7 @@ while numero != -1:
     numero = int(input("Ingrese un numero para rellenar la lista (-1 termina el programa): "))
 
 print("Lista sin valores repetidos:", lista)
-print("Lista ordenada descendientemente usando burbujeo:", ord_bubble_desc(lista))
+print("Lista ordenada ascendentemente usando burbujeo:", ord_bubble_asc(lista))
 
 
 numero = int(input("Ingrese el numero que desea identificar en la lista (-1 termina el programa): "))
@@ -45,6 +50,8 @@ while numero != -1:
     if binary_search(numero, lista):
         print("El numero se encuentra en la lista.")
         cont = cont + 1
+    else:
+        print("El numero no se encuentra en la lista.")
     numero = int(input("Ingrese el numero que desea identificar en la lista (-1 termina el programa): "))
 
 print("Las busquedas exitosas fueron:", cont)
