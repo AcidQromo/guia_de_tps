@@ -4,8 +4,8 @@
 
 import modlists
 
-#Seleccion
-def ord_selection(lst):
+#Seleccion asc
+def ord_selection_asc(lst):
     aux = 0
     for i in range(len(lst)):
         min = i
@@ -20,8 +20,8 @@ def ord_selection(lst):
 
     return lst
 
-#Insercion
-def ord_insertion(lst):
+#Insercion asc
+def ord_insertion_asc(lst):
     for i in range(1, len(lst)):
         key = lst[i]
         j = i - 1
@@ -33,11 +33,53 @@ def ord_insertion(lst):
 
     return lst
 
-#Burbujeo
-def ord_bubble(lst):
+#Burbujeo asc
+def ord_bubble_asc(lst):
     for _ in range(0, len(lst)):
         for i in range(0, len(lst)):
             if lst[i] > lst[i + 1]:
+                aux = lst[i]
+                lst[i] = lst[i + 1]
+                lst[i + 1] = aux
+
+#Seleccion desc
+def ord_selection_desc(lst):
+    aux = 0
+    for i in range(len(lst)):
+        min = i
+        for j in range(i + 1, len(lst)):
+
+            #Cambio de < a >
+            if lst[j] > lst[min]:
+                min = j
+
+        if min != i:
+            aux = lst[i]
+            lst[i] = lst[min]
+            lst[min] = aux
+
+    return lst
+
+#Insercion desc
+def ord_insertion_desc(lst):
+    for i in range(1, len(lst)):
+        key = lst[i]
+        j = i - 1
+
+        #Cambio de < a >=
+        while j >= 0 and key >= lst[j]:
+            lst[j + 1] = lst[j]
+            j = j - 1
+        lst[j + 1] = key
+
+    return lst
+
+#Burbujeo desc
+def ord_bubble_desc(lst):
+    for _ in range(0, len(lst)):
+        for i in range(0, len(lst)):
+            #Cambio de > a <=
+            if lst[i] <= lst[i + 1]:
                 aux = lst[i]
                 lst[i] = lst[i + 1]
                 lst[i + 1] = aux
@@ -64,14 +106,28 @@ print("Lista3 generada con exito.")
 print(lista3)
 
 print("---")
-print("Lista1 ordenada usando seleccion:")
-print(ord_selection(lista1))
+print("Lista1 ordenada ascendientemente usando seleccion:")
+print(ord_selection_asc(lista1))
 
 print("---")
-print("Lista2 ordenada usando insercion:")
-print(ord_insertion(lista2))
+print("Lista1 ordenada descendientemente usando seleccion:")
+print(ord_selection_desc(lista1))
 
 print("---")
-print("Lista3 ordenada usando burbujeo:")
-print(ord_insertion(lista3))
+print("Lista2 ordenada ascendientemente usando insercion:")
+print(ord_insertion_asc(lista2))
+
+print("---")
+print("Lista2 ordenada descendientemente usando insercion:")
+print(ord_insertion_desc(lista2))
+
+print("---")
+print("Lista3 ordenada ascendientemente usando burbujeo:")
+print(ord_insertion_asc(lista3))
+
+print("---")
+print("Lista3 ordenada descendientemente usando burbujeo:")
+print(ord_insertion_desc(lista3))
+
+
 
