@@ -26,34 +26,43 @@ print("Lista3 generada con exito.")
 print(lista3)
 
 '''
-lista1 = [4,2,5,1,3]
+lista1 = [3,2,5,1,4]
+lista2 = [4,6,3,2,4]
 
 #Seleccion
 def ord_selection(lst):
-    min_value = lst[0]
-    print(min_value)
+    
     aux = 0
-    position = 0
-
-    for i in range(0, len(lst)):
+    for i in range(len(lst)):
+        min_index = i
         for j in range(i + 1, len(lst)):
-            if min_value >= lst[j]:
-                min_value = lst[j]
-                position = j
+            if lst[j] < lst[min_index]:
+                min_index = j
 
-        if min_value != lst[i]:
+        if min_index != i:
             aux = lst[i]
-            lst[i] = min_value
-            print(min_value)
-            print(lst[position])
-            lst[position] = aux
-            print(lst[position])
-            print("---")
-            print(lst)
-            print("---")
-            min_value = lst[j]
+            lst[i] = lst[min_index]
+            lst[min_index] = aux
 
     return lst
 
+#Insercion
+def ord_insertion(lst):
+    for i in range(1, len(lst)):
+        key = lst[i]
+        j = i - 1
+
+        while j >= 0 and key < lst[j]:
+            lst[j + 1] = lst[j]
+            j = j - 1
+        lst[j + 1] = key
+
+    return lst
+        
+
 print(lista1)
 print(ord_selection(lista1))
+
+print(lista2)
+print(ord_insertion(lista2))
+
