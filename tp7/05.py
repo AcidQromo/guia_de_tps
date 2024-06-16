@@ -16,22 +16,9 @@ def ord_bubble_asc(lst):
 
     return lst
 
-def binary_search(num, lst):
-    start = 0
-    end = len(lst)
-    while start < end:
-        mid = int((start + end) / 2)
-        if lst[mid] == num:
-            return True
-        elif lst[mid] > num:
-            end = mid
-        else:
-            start = mid + 1
-    return False    
-
 lista = []
 cont = 0
-numero = int(input("Ingrese un numero para rellenar la lista (-1 termina el programa): "))
+numero = int(input("Ingrese un numero para rellenar la lista (-1 termina la ingesta): "))
 
 while numero != -1:
     if modlists.num_in_lst(numero, lista):
@@ -47,7 +34,7 @@ print("Lista ordenada ascendentemente usando burbujeo:", ord_bubble_asc(lista))
 numero = int(input("Ingrese el numero que desea identificar en la lista (-1 termina el programa): "))
 
 while numero != -1:
-    if binary_search(numero, lista):
+    if modlists.bin_search_val(numero, lista):
         print("El numero se encuentra en la lista.")
         cont = cont + 1
     else:

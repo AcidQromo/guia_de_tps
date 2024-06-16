@@ -29,3 +29,16 @@ def num_in_lst_index(num, lst):
             return i
         
     return -1
+
+def bin_search_val(num, lst):
+    start = 0
+    end = len(lst)
+    while start < end:
+        mid = int((start + end) / 2)
+        if lst[mid] == num:
+            return True
+        elif lst[mid] > num:
+            end = mid
+        else:
+            start = mid + 1
+    return False
