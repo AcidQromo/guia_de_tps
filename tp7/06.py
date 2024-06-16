@@ -28,6 +28,17 @@ def ord_bubble_desc(lst):
 
     return lst
 
+def num_insert(num, lst):
+    if lst[0] > lst[1]: #Desc
+        for i in range(0, len(lst)):
+            if num > lst[i]:
+                for j in range(i, len(lst)):
+                aux = lst[i]
+                lst[i] = num
+                lst[i + 1] = aux
+
+    else:
+
 lista = []
 cont = 0
 numero = int(input("Ingrese un numero para rellenar la lista (-1 termina la ingesta): "))
@@ -49,6 +60,10 @@ if ordenamiento == 0:
     print("Lista ordenada ascendentemente usando burbujeo:", ord_bubble_asc(lista))
 else:
     print("Lista ordenada descendentemente usando burbujeo:", ord_bubble_desc(lista))
+
+numero = int(input("Ingrese un numero para insertar dentro de la lista ordenada: "))
+
+print("Lista con el numero insertada:", num_insert(numero, lista))
 
 
 
