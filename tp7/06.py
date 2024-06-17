@@ -30,14 +30,22 @@ def ord_bubble_desc(lst):
 
 def num_insert(num, lst):
     if lst[0] > lst[1]: #Desc
-        for i in range(0, len(lst)):
-            if num > lst[i]:
-                for j in range(i, len(lst)):
-                aux = lst[i]
-                lst[i] = num
-                lst[i + 1] = aux
-
-    else:
+        for i in range(0, len(lst) - 1):
+            if num >= lst[i]:
+                    aux = lst[i]
+                    lst[i] = num
+                    num = lst[i + 1]
+                    lst[i + 1] = aux
+        lst.append(num)
+    else: #Asc
+        for i in range(0, len(lst) - 1):
+            if num <= lst[i]:
+                    aux = lst[i]
+                    lst[i] = num
+                    num = lst[i + 1]
+                    lst[i + 1] = aux
+        lst.append(num)
+    return lst
 
 lista = []
 cont = 0
