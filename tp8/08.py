@@ -63,7 +63,7 @@ desde = int(input("Ingrese desde que numero desea generar los valores (ingresar 
 hasta = int(input("Ingrese hasta que numero desea generar los valores (ingresar 20): "))
 longitud = int(input("Ingrese el valor de numeros enteros que desea en la lista: "))
 
-secuencias = modlists.generate_random_list(desde, hasta, longitud)
+secuencias = modlists.generate_random_lst(desde, hasta, longitud)
 print("--Secuencia generada--")
 print(secuencias)
 
